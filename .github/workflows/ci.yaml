@@ -1,0 +1,22 @@
+name: test pipeline
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          
+      - name: install python and cache 
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+          cache: 'pip'
+
+      - name: python code
+        run: |
+          mkdir team1
+          cd team1
+          ls
+          
