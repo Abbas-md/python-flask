@@ -17,6 +17,8 @@ jobs:
 
       - name: python code
         run: |
+          ls 
+          pwd
           mkdir team1
           cd team1
           ls
