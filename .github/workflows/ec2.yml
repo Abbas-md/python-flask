@@ -1,0 +1,10 @@
+name: connect ec2
+on: workflow_dispatch
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: connect-ec2
+        run: |
+          ssh -i ${{ secrets.pem }} ec2-user@3.7.252.60
+          whoami
