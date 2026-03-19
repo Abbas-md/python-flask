@@ -8,5 +8,5 @@ jobs:
         run: |
           echo "${{ secrets.PEM }}" > key.pem
           chmod 400 key.pem
-          ssh -i key.pem ec2-user@3.7.252.60
+          ssh -o StrictHostKeyChecking=no -i key.pem ec2-user@3.7.252.60
           whoami
