@@ -21,5 +21,7 @@ jobs:
           pwd
           mkdir team1
           cd team1
+          cp -r ./* /team1
+          pwd 
           ls
           
